@@ -4,7 +4,7 @@ let API_BASE_URL = 'http://localhost:5555'; // Default base URL for development
 // Check if the app is running in production
 if (process.env.NODE_ENV === 'production') {
   // Update the base URL for production
-  API_BASE_URL = 'https://your-flask-app-url.com';
+  API_BASE_URL = 'https://phase-4-week-2-codechallange.onrender.com';
 }
 
 // Export the base URL for use in other parts of your app
