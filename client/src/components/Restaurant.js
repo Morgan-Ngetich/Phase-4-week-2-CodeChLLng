@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PizzaForm from "./PizzaForm";
+import { BASE_URL } from './config.js';
 
 function Restaurant() {
   const [{ data: restaurant, error, status }, setRestaurant] = useState({
