@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BASE_URL } from './config.js';
 
 function PizzaForm({ restaurantId, onAddPizza }) {
   const [pizzas, setPizzas] = useState([]);
@@ -7,11 +8,10 @@ function PizzaForm({ restaurantId, onAddPizza }) {
   const [formErrors, setFormErrors] = useState([]);
 
   useEffect(() => {
-    fetch("/pizzas")
+    fetch(`${BASE_URL}/pizzas`)
       .then((r) => r.json())
       .then(setPizzas);
   }, []);
-
 
 
   function handleSubmit(e) {
@@ -21,7 +21,7 @@ function PizzaForm({ restaurantId, onAddPizza }) {
       restaurant_id: restaurantId,
       price: parseInt(price),
     };
-    fetch("/restaurant_pizzas", {
+    fetch(`${BASE_URL}/restaurant_pizzas`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

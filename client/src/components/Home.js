@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL } from './config.js';
 
 function Home() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    fetch("/restaurants")
+    fetch(`${BASE_URL}/restaurants`)
       .then((r) => {
         if (!r.ok) {
           throw new Error('Network response was not ok');
