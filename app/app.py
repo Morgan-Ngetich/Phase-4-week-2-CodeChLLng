@@ -16,7 +16,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    CORS(app, resources={r"/*": {"origins": "https://pizzas-sdfw.onrender.com", "methods": ["GET", "POST", "DELETE"], "allow_headers": ["Content-Type"]}})
+    CORS(app, resources={r"/*": {"origins": "https://pizzas-sdfw-onrender.onrender.com", "methods": ["GET", "POST", "DELETE"], "allow_headers": ["Content-Type"]}})
     
     db.init_app(app)
     migrate = Migrate(app, db)

@@ -1,7 +1,13 @@
-from app import app, db
+from app import create_app, db
 from models import Restaurant, Pizza, RestaurantPizza
 
+def create_tables():
+    app = create_app()
+    with app.app_context():
+        db.create_all()
+
 def seed_data():
+    app = create_app()
     with app.app_context():
         # Create restaurants
         restaurants_data = [
@@ -48,4 +54,5 @@ def seed_data():
         db.session.commit()
 
 if __name__ == '__main__':
+    create_tables()
     seed_data()
