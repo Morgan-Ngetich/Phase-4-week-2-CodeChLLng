@@ -23,7 +23,7 @@ function Home() {
   
 
   function handleDelete(id) {
-    fetch(`/restaurants/${id}`, {
+    fetch(`${BASE_URL}/restaurants/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {
