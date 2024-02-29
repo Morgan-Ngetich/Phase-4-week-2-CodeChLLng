@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from models import db, Restaurant, Pizza, RestaurantPizza
 
 # export DATABASE_URL=postgresql://morgan:uRmATMYHWLmA4Gt2IZVPinYmPAFCuAz7@dpg-cngb178l5elc739651ig-a.oregon-postgres.render.com/pizzas_3pv0
-# SHOULD RUN ON PORT 5555
+# SHOULD RUN ON PORT 5000
 
 
 def create_app():
@@ -127,4 +127,4 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True, port=5555)
+    app.run(debug=True, port=5000)
