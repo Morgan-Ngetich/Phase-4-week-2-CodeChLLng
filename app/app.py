@@ -5,6 +5,12 @@ from flask import Flask, jsonify, request, render_template
 from flask_migrate import Migrate
 from models import db, Restaurant, Pizza, RestaurantPizza
 
+# export DATABASE_URL=postgresql://morgan:QKkVzp
+# hTZD5F5lyzDgORW7D47xmTYGPI@dpg-cneb7rf79t8c73fdntig-a.oregon-postgres.render.com/pizzas_1ln0
+
+# SHOULD RUN ON PORT 5555
+
+
 def create_app():
     
     app = Flask(
