@@ -16,11 +16,10 @@ def create_app():
         static_folder='../client/build',
         template_folder='../client/build'
     )
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-    # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'   
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # CORS(app, resources={r"/*": {"origins": "https://pizzas-sdfw-onrender.onrender.com", "methods": ["GET", "POST", "DELETE"], "allow_headers": ["Content-Type"]}})
+    
 
     CORS(app)
     
